@@ -1,0 +1,52 @@
+package burger;
+
+public class Burger {
+    private final String size;
+    private final boolean chicken;
+    private final boolean mutton;
+
+    private Burger(BurgerBuilder builder) {
+        this.size = builder.size;
+        this.chicken = builder.chicken;
+        this.mutton = builder.mutton;
+    }
+
+    // getters for all fields
+
+
+    public String getSize() {
+        return size;
+    }
+
+    public boolean isChicken() {
+        return chicken;
+    }
+
+    public boolean isMutton() {
+        return mutton;
+    }
+
+    public static class BurgerBuilder {
+        private final String size;
+        private boolean chicken;
+        private boolean mutton;
+
+        public BurgerBuilder(String size) {
+            this.size = size;
+        }
+
+        public BurgerBuilder chicken(boolean chicken) {
+            this.chicken = chicken;
+            return this;
+        }
+
+        public BurgerBuilder mutton(boolean mutton) {
+            this.mutton = mutton;
+            return this;
+        }
+
+        public Burger build() {
+            return new Burger(this);
+        }
+    }
+}
