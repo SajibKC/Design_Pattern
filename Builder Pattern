@@ -1,0 +1,10 @@
+package burger;
+
+public class Client {
+    public static void main(String[] args) {
+        var burger = new Burger.BurgerBuilder("larger").chicken(true).mutton(true).build();
+
+        System.out.println(burger.isChicken());
+        System.out.println(burger.isMutton());
+    }
+}
