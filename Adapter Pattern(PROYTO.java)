@@ -1,0 +1,11 @@
+package adapter;
+
+public class PROYTO {
+
+    public PROYTO(){};
+    public PROYTO(String data){}
+    XML convertToXML(){
+        // logic to convert the data to XML
+        return new XML("Stringified PROYTO data");
+    }
+}
