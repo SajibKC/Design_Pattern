@@ -1,0 +1,7 @@
+package adapter;
+
+public class Client {
+    PROYTO proyto = new PROYTO("proyto data");
+    IAdapter iAdapter = new ProytoToXmlAdapter(proyto);
+    XML xml = iAdapter.convert(proyto);
+}
