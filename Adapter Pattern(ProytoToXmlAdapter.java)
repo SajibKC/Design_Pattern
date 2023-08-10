@@ -1,0 +1,14 @@
+package adapter;
+
+public class ProytoToXmlAdapter implements IAdapter{
+    private PROYTO proyto;
+
+    public ProytoToXmlAdapter(PROYTO proyto){
+        this.proyto = proyto;
+    }
+
+    @Override
+    public XML convert(PROYTO proyto) {
+        return this.proyto.convertToXML();
+    }
+}
